@@ -42,7 +42,7 @@ function vif(dfrm::RegressionModel)
     rhs = extractrhs(dfrm)
     result = DataFrame(variable=rhs.rhsarray, vif=0.0)
     i = 1
-    for (var in rhs.rhsarray)
+    for var in rhs.rhsarray
         lhs = parse(var)
         rhsnew = replace(rhs.rhsstring, "+"*var, "")
         rhsnew = rhsnew[2:end]
