@@ -23,7 +23,7 @@ function avPlot(dfrm::RegressionModel, variable::Symbol)
     e_zx = *((eye(size(H)[1])-H), Z)
     df = DataFrame(e_yx=e_yx, e_zx=e_zx)
     # get alpha
-    avlm = fit(LinearModel, e_yx~0+e_zx, df)
+    avlm = fit(LinearModel, @formula(e_yx~0+e_zx), df)
     alpha = coef(avlm)
     # plot
     xs_range = abs(maximum(df[:e_zx]) - minimum(df[:e_zx]))
