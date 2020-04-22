@@ -1,0 +1,19 @@
+name = "RegTools"
+uuid = "5eb05430-e3de-4115-b555-f3006c8656e1"
+authors = ["wakakusa"]
+version = "0.1.0"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+GLM = "38e38edf-8417-5370-95a0-9cbb8c7f171a"
+Gadfly = "c91e804a-d5a3-530f-b6f0-dfbca275c004"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
