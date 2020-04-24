@@ -453,7 +453,7 @@ uuid = "189a3867-3050-52da-a836-e630ba90ab69"
 version = "0.2.0"
 
 [[RegTools]]
-deps = ["DataFrames", "Distributions", "GLM", "Gadfly"]
+deps = ["Arpack", "DataFrames", "Distributions", "GLM", "Gadfly"]
 path = ".."
 uuid = "5eb05430-e3de-4115-b555-f3006c8656e1"
 version = "0.1.0"
