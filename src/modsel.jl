@@ -1,15 +1,12 @@
 using GLM, DataFrames
 include("misc.jl")
 
-abstract FitGoodness
-abstract InfoMeasure <: FitGoodness
+abstract type FitGoodness end
+abstract type InfoMeasure <: FitGoodness end
 
-type AIC <: InfoMeasure
-end
-type AICc <: InfoMeasure
-end
-type BIC <: InfoMeasure
-end
+abstract type AIC <: InfoMeasure end
+abstract type AICc <: InfoMeasure end
+abstract type BIC <: InfoMeasure end
 
 function AIC(dfrm::RegressionModel)
     n = size(dfrm.mf.df)[1] # number of cases
@@ -42,7 +39,7 @@ function BIC(dfrm::RegressionModel)
     return n*log(deviance(dfrm.model.rr)/n) + log(n)*k
 end
 
-type extractrhs
+struct extractrhs
     rhsarray::Array
     rhsstring::AbstractString
 end
@@ -71,15 +68,15 @@ end
 
 
 
-abstract VarSel
+abstract type VarSel end
 
-type add1 <: VarSel
+struct add1 <: VarSel
     aic::Float64
     add::AbstractString
     model::RegressionModel
 end
 
-type drop1 <: VarSel
+struct drop1 <: VarSel
     aic::Float64
     drop::AbstractString
     model::RegressionModel
@@ -169,7 +166,7 @@ end
 drop1(dfrm::RegressionModel) = drop1(dfrm, extractrhs(dfrm).rhsstring)
 
 
-type step <: VarSel
+struct step <: VarSel
     aic::Float64
     model::RegressionModel
 end
