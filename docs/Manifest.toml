@@ -86,6 +86,10 @@ deps = ["LinearAlgebra", "Statistics", "StatsBase"]
 git-tree-sha1 = "6c9671364c68c1158ac2524ac881536195b7e7bc"
 uuid = "7ad07ef1-bdf2-5661-9d2b-286fd4296dac"
 version = "0.2.0"
+deps = ["Compat", "StatsBase"]
+git-tree-sha1 = "d56f26542bb7af9c0ec16e098a0a33352f3c9d8e"
+uuid = "7ad07ef1-bdf2-5661-9d2b-286fd4296dac"
+version = "0.1.0"
 
 [[DataAPI]]
 git-tree-sha1 = "00612b2fbe534a539dc7f70106c71e3a943d9b98"
@@ -213,6 +217,10 @@ deps = ["Colors", "Compat", "Compose", "Contour", "CoupledFields", "DataArrays",
 git-tree-sha1 = "39b4c6cc4e049381cb8ed5c2048c929d15957c82"
 uuid = "c91e804a-d5a3-530f-b6f0-dfbca275c004"
 version = "0.8.0"
+deps = ["Base64", "CategoricalArrays", "Colors", "Compose", "Contour", "CoupledFields", "DataStructures", "Dates", "Distributions", "DocStringExtensions", "Hexagons", "IndirectArrays", "IterTools", "JSON", "Juno", "KernelDensity", "LinearAlgebra", "Loess", "Measures", "Printf", "REPL", "Random", "Requires", "Showoff", "Statistics"]
+git-tree-sha1 = "fb92aef6380b6d9a252b2200c9405fcfdad31065"
+uuid = "c91e804a-d5a3-530f-b6f0-dfbca275c004"
+version = "1.2.1"
 
 [[Hexagons]]
 deps = ["Test"]
